@@ -242,31 +242,19 @@
 
             <div class="form-group">
                 <label for="province">Province</label>
-                <select name="province" id="province-dropdown" required>
-                    <?php if (isset($user['province'])) : ?>
-                        <option value="<?= $user['province'] ?>" selected><?= $user['province'] ?></option>
-                    <?php endif; ?>
-                </select>
+                <input type="text" id="province" name="province" value="<?= isset($user['province']) ? $user['province'] : '' ?>" required>
                 <span class="error-message"><?php echo $provinceError; ?></span>
             </div>
 
             <div class="form-group">
                 <label for="city">City</label>
-                <select name="city" id="city-dropdown" required>
-                    <?php if (isset($user['city'])) : ?>
-                        <option value="<?= $user['city'] ?>" selected><?= $user['city'] ?></option>
-                    <?php endif; ?>
-                </select>
+                <input type="text" id="city" name="city" value="<?= isset($user['city']) ? $user['city'] : '' ?>" required>
                 <span class="error-message"><?php echo $cityError; ?></span>
             </div>
 
             <div class="form-group">
                 <label for="barangay">Barangay</label>
-                <select name="barangay" id="barangay-dropdown" required>
-                    <?php if (isset($user['barangay'])) : ?>
-                        <option value="<?= $user['barangay'] ?>" selected><?= $user['barangay'] ?></option>
-                    <?php endif; ?>
-                </select>
+                <input type="text" id="barangay" name="barangay" value="<?= isset($user['barangay']) ? $user['barangay'] : '' ?>" required>
                 <span class="error-message"><?php echo $barangayError; ?></span>
             </div>
 

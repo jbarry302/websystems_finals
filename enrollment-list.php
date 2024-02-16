@@ -92,6 +92,8 @@
         </div>
     </main>
 
+    <?php include('inc/footer.php'); ?>
+
     <script>
         const selects = document.querySelectorAll('select');
         selects.forEach(select => {
