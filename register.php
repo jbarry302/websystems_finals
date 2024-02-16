@@ -83,19 +83,19 @@
         if (empty($province)) {
             $provinceError = 'Please enter your province.';
         } else {
-            $provinceName = getLocationName('provinces.json', $province);
+            // $provinceName = getLocationName('provinces.json', $province);
         }
 
         if (empty($city)) {
             $cityError = 'Please enter your city.';
         } else {
-            $cityName = getLocationName('cities.json', $city);
+            // $cityName = getLocationName('cities.json', $city);
         }
 
         if (empty($barangay)) {
             $barangayError = 'Please enter your barangay.';
         } else {
-            $barangayName = getLocationName('barangays.json', $barangay);
+            // $barangayName = getLocationName('barangays.json', $barangay);
         }
 
         if (empty($password)) {
@@ -198,6 +198,7 @@
                     <span class="error-message"><?php echo $birthdayError; ?></span>
                 </div>
 
+
                 <div class="form-group">
                     <label for="region">Region</label>
                     <select name="region" id="region-dropdown" required></select>
@@ -206,25 +207,43 @@
 
                 <div class="form-group">
                     <label for="province">Province</label>
-                    <select name="province" id="province-dropdown" required></select>
+                    <input type="text" id="province" name="province"  required>
                     <span class="error-message"><?php echo $provinceError; ?></span>
                 </div>
 
                 <div class="form-group">
                     <label for="city">City</label>
-                    <select name="city" id="city-dropdown" required></select>
+                    <input type="text" id="city" name="city"  required>
                     <span class="error-message"><?php echo $cityError; ?></span>
                 </div>
 
                 <div class="form-group">
                     <label for="barangay">Barangay</label>
-                    <select name="barangay" id="barangay-dropdown" required></select>
+                    <input type="text" id="barangay" name="barangay"  required>
                     <span class="error-message"><?php echo $barangayError; ?></span>
                 </div>
 
+                <!-- <div class="form-group">
+                    <label for="province">Province</label>
+                    <select name="province" id="province-dropdown" required></select>
+                    <span class="error-message">?php echo $provinceError; ?></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <select name="city" id="city-dropdown" required></select>
+                    <span class="error-message">?php echo $cityError; ?></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="barangay">Barangay</label>
+                    <select name="barangay" id="barangay-dropdown" required></select>
+                    <span class="error-message">?php echo $barangayError; ?></span>
+                </div> -->
+
                 <div class="form-group">
                     <label for="last_name">Landmark (Optional)</label>
-                    <input type="text" id="landmark" name="landmark" value="<?= isset($landmark) ? $landmark : '' ?>" required>
+                    <input type="text" id="landmark" name="landmark" value="<?= isset($landmark) ? $landmark : '' ?>">
                 </div>
 
                 <div class="form-group">

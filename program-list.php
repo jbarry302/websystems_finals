@@ -56,10 +56,12 @@
                                 <span class="duration"><?php echo $program['years']; ?> years</span>
                                 <span class="accepted_enrollees"><?php echo $program['accepted_enrollees']; ?> <i class="fa-solid fa-user" title="<?= $program['accepted_enrollees'] ?> enrollees"></i></span>
                             </div>
-                            <div class="program-buttons">
-                                <a href="enrollment-form.php?code=<?= $program['code']; ?>" class="btn">Enroll Now!</a>
-                                <a href="program-prospectus.php?code=<?= $program['code'] ?>"><i class="fa-solid fa-circle-info fa-lg" title="view courses"></i></a>
-                            </div>
+                            <?php if (isset($_SESSION['email']) && $_SESSION['role'] === 'student') : ?>
+                                <div class="program-buttons">
+                                    <a href="enrollment-form.php?code=<?= $program['code']; ?>" class="btn">Enroll Now!</a>
+                                    <a href="program-prospectus.php?code=<?= $program['code'] ?>"><i class="fa-solid fa-circle-info fa-lg" title="view courses"></i></a>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 <?php endforeach; ?>
