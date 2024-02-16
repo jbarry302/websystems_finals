@@ -1,0 +1,32 @@
+#cookie-dialog {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: gray;
+  text-align: center;
+  z-index: 2;
+}
+
+#cookie-dialog p {
+  margin: 0;
+}
+
+.cookie-buttons {
+  margin-top: 10px;
+}
+
+.cookie-buttons button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cookie-buttons button:hover {
+  background-color: #3367d6;
+}

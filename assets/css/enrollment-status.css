@@ -1,0 +1,82 @@
+main {
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.enrollment-status-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.enrollment-status {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: background-color 0.3s ease;
+  width: 300px;
+}
+
+.enrollment-status.APPLIED:hover,
+.enrollment-status.PROCESSING:hover,
+.enrollment-status.ACCEPTED:hover,
+.enrollment-status.REJECTED:hover,
+.enrollment-status.ON-HOLD:hover {
+  filter: brightness(90%);
+}
+
+.enrollment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.enrollment-header i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.enrollment-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.enrollment-details p {
+  margin: 5px 0;
+}
+
+.enrollment-status.APPLIED {
+  background-color: #c8e6c9;
+}
+
+.enrollment-status.PROCESSING {
+  background-color: #b3e5fc;
+}
+
+.enrollment-status.ACCEPTED {
+  background-color: #dcedc8;
+}
+
+.enrollment-status.REJECTED {
+  background-color: #ffcdd2;
+}
+
+.enrollment-status.ON-HOLD {
+  background-color: #ffe0b2;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .enrollment-status {
+    width: 100%;
+  }
+}

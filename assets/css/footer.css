@@ -1,0 +1,84 @@
+/* footer */
+footer {
+  background-color: lightgray;
+}
+
+/* Footer container */
+.footer-container {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Footer grid layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+/* Footer sections */
+.footer-section {
+  text-align: left;
+}
+
+/* Footer section headings */
+.footer-section h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Footer links */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #333;
+}
+
+/* Social media icons */
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #333;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #333;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Additional styles */
+.footer-container p {
+  margin: 0;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

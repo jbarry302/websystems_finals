@@ -1,0 +1,161 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Login Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Login Card */
+.login-card {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-card form {
+  margin-top: 20px;
+}
+
+.login-card input[type="text"],
+.login-card input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-sizing: border-box; /* Add this property */
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+/* Password Input */
+.password-input {
+  position: relative;
+}
+
+.password-input input {
+  padding-right: 40px;
+}
+
+.password-input .toggle-password {
+  position: absolute;
+  top: 35%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Additional Options */
+.additional-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.additional-options label {
+  font-size: 14px;
+}
+
+.forgot-password {
+  font-size: 14px;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #4285f4;
+}
+
+/* Login Button */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #4285f4;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3367d6;
+}
+
+/* Register Link */
+.register-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #4285f4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+  color: #3367d6;
+}
+
+
+
+/* For small screens */
+@media screen and (max-width: 600px) {
+  .login-card {
+    max-width: 90%;
+  }
+}
+
+/* For medium screens */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .login-card {
+    max-width: 70%;
+  }
+}
+
+/* For large screens */
+@media screen and (min-width: 1025px) {
+  .login-card {
+    max-width: 50%;
+  }
+}

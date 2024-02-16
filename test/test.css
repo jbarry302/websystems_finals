@@ -1,0 +1,139 @@
+/* Reset some default styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-toggle.active span:first-child {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:last-child {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 10px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.menu.active li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hover effect for menu items */
+.menu li:hover a {
+  color: #ff8c00;
+}
+
+/* Fade-in animation for menu items */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu li {
+  animation: fade-in 0.5s ease-in-out forwards;
+}
+
+.content {
+  height: 200vh;
+  background-color: lightcoral;
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    margin-bottom: 10px;
+  }
+}
